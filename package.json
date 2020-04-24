@@ -1,0 +1,26 @@
+{
+	"name": "starter",
+	"version": "1.0.0",
+	"description": "Starter",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
+		"nodemon": "nodemon",
+		"start": "npm-run-all --parallel nodemon watch:sass",
+		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.css -o public/css/style.prefix.css",
+		"compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css"
+	},
+	"author": "Anthony Velez",
+	"license": "ISC",
+	"dependencies": {
+		"autoprefixer": "^7.1.4",
+		"ejs": "^3.0.2",
+		"express": "^4.17.1",
+		"node-sass": "^4.5.3",
+		"nodemon": "^2.0.2",
+		"npm-run-all": "^4.1.1",
+		"postcss-cli": "^7.1.0"
+	}
+}
