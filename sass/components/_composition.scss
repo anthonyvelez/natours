@@ -16,8 +16,9 @@
 			grid-row: 1 / 2;
 			grid-column: 1 / 4;
 		}
+
 		@include respond(phone) {
-			padding: 0 .5rem;
+			padding: 0 .75rem;
 		}
 	}
 
@@ -30,7 +31,7 @@
 			grid-row: 2 / 3;
 			grid-column: 1 / 4;
 			justify-self: center;
-			margin-left: 0;
+			margin: 0rem auto;
 			margin-bottom: 3rem;
 		}
 	}
@@ -55,6 +56,14 @@
 		z-index: 10;
 		transition: all .2s;
 		outline-offset: 1.5rem;
+
+		@include respond(tab-port) {
+			outline-offset: 0rem;
+		}
+
+		@include respond(phone) {
+			width: 22rem;
+		}
 
 		&--p1 {
 			position: absolute;
@@ -94,13 +103,12 @@
 			box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
 			z-index: 200;
 			outline: 1rem solid $color-primary;
-		}
-
-		&:hover &__photo:not(:hover) {
-			transform: scale(.90);
 
 			@include respond(tab-port) {
-				transform: scale(1);
+				transform: scale(1.05);
+				box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+				z-index: 200;
+				outline: 0rem solid $color-primary;
 			}
 		}
 	}
