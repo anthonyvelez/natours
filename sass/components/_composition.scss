@@ -62,7 +62,7 @@
 		}
 
 		@include respond(phone) {
-			width: 22rem;
+			width: 17rem;
 		}
 
 		&--p1 {
@@ -73,6 +73,10 @@
 			@include respond(tab-port) {
 				top: 0;
 				left: -12rem;
+			}
+
+			@include respond(phone) {
+				left: -9rem;
 			}
 		}
 

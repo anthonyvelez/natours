@@ -445,7 +445,7 @@ body {
         outline-offset: 0rem; } }
     @media only screen and (max-width: 37.5em) {
       .about__photo {
-        width: 22rem; } }
+        width: 17rem; } }
     .about__photo--p1 {
       position: absolute;
       right: 20rem;
@@ -454,6 +454,9 @@ body {
         .about__photo--p1 {
           top: 0;
           left: -12rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .about__photo--p1 {
+          left: -9rem; } }
     .about__photo--p2 {
       position: absolute;
       top: -6rem;
@@ -916,6 +919,7 @@ body {
   left: 0;
   z-index: 1500;
   opacity: 0;
+  visibility: hidden;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
@@ -955,6 +959,7 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
+  visibility: visible;
   width: 100%; }
 
 .navigation__icon {
