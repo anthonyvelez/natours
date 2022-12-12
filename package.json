@@ -17,7 +17,7 @@
 	"dependencies": {
 		"autoprefixer": "^7.1.4",
 		"ejs": "^3.0.2",
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"node-sass": "^4.5.3",
 		"nodemon": "^2.0.2",
 		"npm-run-all": "^4.1.1",
